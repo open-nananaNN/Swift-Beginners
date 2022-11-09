@@ -18,11 +18,14 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            
+            //スペースを追加
+            Spacer()
             
             //じゃんけんの数字が0だったら
             if answerNumber == 0 {
                Text("これからじゃんけんをします！")
+                //下辺に余白を追加
+                    .padding(.bottom)
             } else if answerNumber == 1 {
                 //じゃんけんの数字が1だったらグーを表示
                 //グー画像を指定
@@ -31,9 +34,13 @@ struct ContentView: View {
                     .resizable()
                 //Modifierでアス比を維持する指定
                     .scaledToFit()
+                //スペースを追加
+                Spacer()
                 
                 //じゃんけんの種類を指定
                 Text("グー")
+                //下辺に余白を追加
+                    .padding(.bottom)
                 
             } else if answerNumber == 2 {
                 //じゃんけんの数字が2だったらチョキ
@@ -43,9 +50,13 @@ struct ContentView: View {
                     .resizable()
                 //Modifierでアス比を維持する指定
                     .scaledToFit()
+                //スペースを追加
+                Spacer()
                 
                 //じゃんけんの種類を指定
                 Text("チョキ")
+                //下辺に余白を追加
+                    .padding(.bottom)
                 
             } else {
                 //じゃんけんの数字が1、2以外だったらパー
@@ -55,24 +66,47 @@ struct ContentView: View {
                     .resizable()
                 //Modifierでアス比を維持する指定
                     .scaledToFit()
+                //スペースを追加
+                Spacer()
                 
                 //じゃんけんの種類を指定
                 Text("パー")
+                //下辺に余白を追加
+                    .padding(.bottom)
             }//ifここまで
-            
-            
             
             
             //[じゃんけんをする！]ボタンを置く
             Button {
-                //ボタンがタップされた時の動きを記述
-                //print("タップされたよ！")
-                //次のじゃんけんへ
-                answerNumber = Int.random(in: 1...3)
+                //新しいじゃんけんの結果を一時的に格納する変数を設置
+                var newAnswerNumber = 0
+                
+                //ランダムに結果を出すが前回の結果とは異なる場合のみ採用
+                //repeatは繰り返しを意味する
+                repeat {
+                    //123の数値をランダムに算出（乱数）
+                    newAnswerNumber = Int.random(in: 1...3)
+                    
+                    //前回と同じ結果　の時は再度ランダムに数値を出す
+                    //異なる結果の時はrepeatを抜ける
+                }while answerNumber == newAnswerNumber
+                
+                //新しいじゃんけんの結果を格納
+                answerNumber = newAnswerNumber
+                
+                
+                
             } label: {
                 //ボタンの上に表示する言葉
                 Text("じゃんけんをする！")
-            }//じゃんけんボタンはここまで
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 100)
+                    .font(.title)
+                    .background(Color.pink)
+                    .foregroundColor(Color.white)
+                    
+                
+            }//ボタンはここまで
             
         }//vstackここまで
         
