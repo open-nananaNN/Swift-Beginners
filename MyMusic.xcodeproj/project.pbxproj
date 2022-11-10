@@ -12,6 +12,7 @@
 		3E822450291BB7F1003F41DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E82244F291BB7F1003F41DD /* Assets.xcassets */; };
 		3E822453291BB7F1003F41DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E822452291BB7F1003F41DD /* Preview Assets.xcassets */; };
 		3E82245A291BC69E003F41DD /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E822459291BC69E003F41DD /* SoundPlayer.swift */; };
+		3E82245E291CF0B0003F41DD /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82245D291CF0B0003F41DD /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		3E82244F291BB7F1003F41DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E822452291BB7F1003F41DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E822459291BC69E003F41DD /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		3E82245D291CF0B0003F41DD /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				3E822459291BC69E003F41DD /* SoundPlayer.swift */,
 				3E82244B291BB7EF003F41DD /* MyMusicApp.swift */,
 				3E82244D291BB7EF003F41DD /* ContentView.swift */,
+				3E82245D291CF0B0003F41DD /* BackgroundView.swift */,
 				3E82244F291BB7F1003F41DD /* Assets.xcassets */,
 				3E822451291BB7F1003F41DD /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				3E82244E291BB7EF003F41DD /* ContentView.swift in Sources */,
 				3E82245A291BC69E003F41DD /* SoundPlayer.swift in Sources */,
+				3E82245E291CF0B0003F41DD /* BackgroundView.swift in Sources */,
 				3E82244C291BB7EF003F41DD /* MyMusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +275,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyMusic/Preview Content\"";
+				DEVELOPMENT_TEAM = D2M79WD47H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -299,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyMusic/Preview Content\"";
+				DEVELOPMENT_TEAM = D2M79WD47H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
